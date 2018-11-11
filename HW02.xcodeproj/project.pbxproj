@@ -17,6 +17,7 @@
 		CB112F902195292500476785 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB112F8F2195292500476785 /* LogOutViewController.swift */; };
 		CB112F922195293900476785 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB112F912195293900476785 /* LoginViewController.swift */; };
 		CB112F9421954E4200476785 /* account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB112F9321954E4200476785 /* account.swift */; };
+		CBE28762219836A800DC45A3 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE28761219836A800DC45A3 /* DesignableUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CB112F8F2195292500476785 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		CB112F912195293900476785 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB112F9321954E4200476785 /* account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = account.swift; sourceTree = "<group>"; };
+		CBE28761219836A800DC45A3 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				CB112F8F2195292500476785 /* LogOutViewController.swift */,
 				CB112F912195293900476785 /* LoginViewController.swift */,
 				CB112F9321954E4200476785 /* account.swift */,
+				CBE28761219836A800DC45A3 /* DesignableUITextField.swift */,
 			);
 			path = HW02;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				CB112F9421954E4200476785 /* account.swift in Sources */,
 				CB112F922195293900476785 /* LoginViewController.swift in Sources */,
 				CB112F7B21951A3D00476785 /* ViewController.swift in Sources */,
+				CBE28762219836A800DC45A3 /* DesignableUITextField.swift in Sources */,
 				CB112F7921951A3D00476785 /* AppDelegate.swift in Sources */,
 				CB112F8E2195290300476785 /* SignUpViewController.swift in Sources */,
 				CB112F902195292500476785 /* LogOutViewController.swift in Sources */,

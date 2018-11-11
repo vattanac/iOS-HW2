@@ -10,10 +10,15 @@ import UIKit
 
 class LogOutViewController: UIViewController {
 
+    @IBOutlet weak var WelcomNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.performSegue(withIdentifier: "loginId", sender: self)
+   
+        let namedatastore = UserDefaults.standard.string(forKey: "username")
+       // let passworddatastore = UserDefaults.standard.string(forKey: "password")
+       
+        WelcomNameLabel.text = "Welcome \(namedatastore!)"
     }
     
 

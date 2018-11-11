@@ -75,7 +75,22 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
+    override  func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "logoutId" { // you define it in the storyboard (click on the segue, then Attributes' inspector > Identifier
+            
+            if( usernameLabel.text?.isEmpty == true && passwordLabel.text?.isEmpty == true && ConfirmPasswordLabel.text?.isEmpty == true){
+                print("*** NOPE, segue wont occur")
+                return false
+            }
+            else {
+                print("*** YEP, segue will occur")
+            }
+        }
+        
+        // by default, transition
+        return true
+    }
     func displayMessage(msg:String){
         let myAlert = UIAlertController(title: "Alert", message: msg, preferredStyle:.alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
