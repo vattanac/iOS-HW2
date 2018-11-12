@@ -28,11 +28,17 @@ class SignUpViewController: UIViewController {
         signUpLabel.layer.cornerRadius = 5
         
     }
+    func ValidateUserName() -> Bool {
+        let username = usernameLabel.text!
+        let regex = "[A-Z0-9a-z]+"
+        let valid = NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: username)
+        return valid
+    }
+    
     
     
     @IBAction func SignUpButton(_ sender: Any) {
          var user = Account(username: nil, password: nil)
-        
          let username = usernameLabel.text!
          let password = passwordLabel.text!
          let confirmpassword = ConfirmPasswordLabel.text!
@@ -48,13 +54,16 @@ class SignUpViewController: UIViewController {
             ConfirmPasswordLabel.becomeFirstResponder()
             return
         }
-        //print("Name:\(username)","password:\(password)")
         
         else{
-            user.username = username
-            user.password = Int(password)
-            
-            accountList.append(user)
+            if !ValidateUserName(){
+                print(ValidateUserName())
+                displayMessage(msg: "Please Input String User's Name!")
+            }else{
+                
+                  print("Hello")
+            }
+
            
         }
         UserDefaults.standard.set(username, forKey: "username")
@@ -77,7 +86,7 @@ class SignUpViewController: UIViewController {
     
     override  func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if identifier == "logoutId" { // you define it in the storyboard (click on the segue, then Attributes' inspector > Identifier
+        if identifier == "logoutId" {
             
             if( usernameLabel.text?.isEmpty == true && passwordLabel.text?.isEmpty == true && ConfirmPasswordLabel.text?.isEmpty == true){
                 print("*** NOPE, segue wont occur")
@@ -88,7 +97,6 @@ class SignUpViewController: UIViewController {
             }
         }
         
-        // by default, transition
         return true
     }
     func displayMessage(msg:String){
@@ -99,6 +107,7 @@ class SignUpViewController: UIViewController {
         
         self.present(myAlert, animated: true, completion: nil)
     }
+    
     
 
 }
